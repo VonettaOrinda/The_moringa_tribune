@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-      'news.apps.NewsConfig',
-      'bootstrap3'
+    'news.apps.NewsConfig',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -76,9 +76,11 @@ WSGI_APPLICATION = 'tribune.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'tribune',
+        'USER':'vonetta',
+    'PASSWORD':'von123',
     }
 }
 
@@ -107,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
